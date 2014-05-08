@@ -62,6 +62,10 @@ main(int argc, char **argv)
     preinitForbidden();
     preinitSocks();
 
+    /* PSIPHON */
+    preinitSplitTunneling();
+    /* /PSIPHON */
+
     i = 1;
     while(i < argc) {
         if(argv[i][0] != '-')
@@ -138,6 +142,10 @@ main(int argc, char **argv)
     initDiskcache();
     initForbidden();
     initSocks();
+
+    /* PSIPHON */
+    initSplitTunneling();
+    /* /PSIPHON */
 
     if(printConfig) {
         printConfigVariables(stdout, 0);

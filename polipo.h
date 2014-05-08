@@ -236,6 +236,10 @@ THE SOFTWARE.
 #include "auth.h"
 #include "tunnel.h"
 
+/* PSIPHON */
+#include "split.h"
+/* /PSIPHON */
+
 extern AtomPtr configFile;
 extern int daemonise;
 extern AtomPtr pidFile;
