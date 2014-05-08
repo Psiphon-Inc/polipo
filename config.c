@@ -562,9 +562,14 @@ parseAtom(char *buf, int offset, AtomPtr *value_return, int insensitive)
         j = i + 1;
     } else {
         y0 = i;
-        while(letter(buf[i]) || digit(buf[i]) || 
+        while(letter(buf[i]) || digit(buf[i]) ||
               buf[i] == '_' || buf[i] == '-' || buf[i] == '~' ||
-              buf[i] == '.' || buf[i] == ':' || buf[i] == '/')
+              buf[i] == '.' || buf[i] == ':' || buf[i] == '/'
+              /* PSIPHON: support Windows paths (...which isn't supposed to be
+                 a problem... maybe because we're compiling in Cygwin?) */
+              || buf[i] == '\\'
+              /* /PSIPHON */
+              )
             i++;
         j = i;
     }
