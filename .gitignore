@@ -10,3 +10,6 @@ Debug
 *.suo
 *.opensdf
 *.sdf
+
+libs
+obj
