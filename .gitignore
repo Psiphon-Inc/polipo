@@ -10,6 +10,7 @@ Debug
 *.suo
 *.opensdf
 *.sdf
+*.vcxproj.user
 
 libs
 obj

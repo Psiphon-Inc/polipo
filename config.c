@@ -569,8 +569,8 @@ parseAtom(char *buf, int offset, AtomPtr *value_return, int insensitive)
                  a problem... maybe because we're compiling in Cygwin?) */
 #if defined(CYGWIN) || defined(WIN32)
               || buf[i] == '\\'
-              /* /PSIPHON */
 #endif
+              /* /PSIPHON */
               )
             i++;
         j = i;
